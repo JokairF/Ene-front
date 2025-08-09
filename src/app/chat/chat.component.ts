@@ -54,8 +54,8 @@ export class ChatComponent implements OnInit {
       this.chat.chat({
         session_id: this.sessionId,
         message: text,
-        style: { personality: 'ene', reply_style: 'immersive', min_words: 80 },
-        gen: { temperature: 0.7, max_tokens: 256 }
+        style: { personality: 'ene', reply_style: 'immersive', min_words: 60 },
+        gen: { temperature: 0.6, max_tokens: 256 }
       }).subscribe({
         next: res => {
           this.messages = res.history;
