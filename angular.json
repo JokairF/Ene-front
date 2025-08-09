@@ -59,13 +59,16 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "ene-ui:build:production"
             },
             "development": {
               "buildTarget": "ene-ui:build:development"
-            }
+        }
           },
           "defaultConfiguration": "development"
         },
